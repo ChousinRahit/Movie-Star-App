@@ -19,9 +19,13 @@ const App = () => {
         <ScrollMemory />
         <Header />
         <Switch>
-          <Route path="/" exact component={Movies} />
+          <Route path="Movie-Star-App/" exact component={Movies} />
 
-          <Route path="/search" exact component={SearchedResults} />
+          <Route
+            path="Movie-Star-App/search"
+            exact
+            component={SearchedResults}
+          />
           <Suspense
             fallback={
               <div className="loadingDiv">
@@ -29,7 +33,7 @@ const App = () => {
               </div>
             }
           >
-            <Route path="/:movieId" exact component={MovieInfo} />
+            <Route path="Movie-Star-App/:movieId" exact component={MovieInfo} />
           </Suspense>
         </Switch>
         <Footer />

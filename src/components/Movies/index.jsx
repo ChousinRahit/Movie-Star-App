@@ -15,7 +15,7 @@ const Movies = () => {
   const history = useHistory();
 
   if (errors.nullMovies) {
-    history.push('/noResy');
+    history.push('/Movie-Star-App/noResy');
   }
 
   const dispatch = useDispatch();

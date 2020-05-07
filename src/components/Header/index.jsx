@@ -46,7 +46,7 @@ const Header = () => {
   const onYearSubmitClick = (e) => {
     e.preventDefault();
     if (queryYear >= 1881) {
-      history.push(`/search?year=${queryYear}&page=1`);
+      history.push(`/Movie-Star-App/search?year=${queryYear}&page=1`);
       setIsDrawerOpen(false);
     }
   };
@@ -60,7 +60,7 @@ const Header = () => {
           setIsCategoriesShowing(false);
         }}
       >
-        <Link to={`/search?genre=${gen.name.toLowerCase()}&page=1`}>
+        <Link to={`/Movie-Star-App/search?genre=${gen.name.toLowerCase()}&page=1`}>
           {gen.name}
         </Link>
       </li>
@@ -84,7 +84,7 @@ const Header = () => {
           setIsCategoriesShowing(false);
         }}
       >
-        <Link to={`/search?lang=${langCode}&page=1`}>
+        <Link to={`/Movie-Star-App/search?lang=${langCode}&page=1`}>
           {LanguageListObj[langCode]}
         </Link>
       </li>
@@ -111,11 +111,11 @@ const Header = () => {
       <li
         className={linksClassNameDependingOnScreenSize}
         onClick={() => {
-          history.push('/');
+          history.push('/Movie-Star-App/');
           setIsDrawerOpen(false);
         }}
       >
-        <Link to="/">Popular</Link>
+        <Link to="/Movie-Star-App/">Popular</Link>
       </li>
       <li
         className={linksClassNameDependingOnScreenSize}
@@ -170,7 +170,7 @@ const Header = () => {
     e.target.children[0].blur();
     if (searchKey) {
       setIsDrawerOpen(false);
-      history.push(`/search?q=${searchKey}&page=1`);
+      history.push(`/Movie-Star-App/search?q=${searchKey}&page=1`);
     }
   };
 

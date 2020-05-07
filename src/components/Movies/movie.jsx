@@ -44,7 +44,7 @@ const Movie = ({ movie }) => {
 
   return (
     <div className="movies__movie">
-      <Link to={`/${movie.id}`}>
+      <Link to={`/Movie-Star-App/${movie.id}`}>
         <img
           className={`movies__movie__tumb ${thumbheight} ${thumbheight}`}
           src={
@@ -58,7 +58,7 @@ const Movie = ({ movie }) => {
 
       <div className={`movies__movie_txt ${plessforinfo}`}>
         <Link
-          to={`/${movie.id}`}
+          to={`/Movie-Star-App/${movie.id}`}
           style={{ textDecoration: 'none', color: 'inherit' }}
         >
           <h1 className={`movies__movie_txt_name ${sfont}`}>
@@ -87,7 +87,7 @@ const Movie = ({ movie }) => {
             {movie?.genre_ids.map((id) => (
               <li key={id}>
                 <Link
-                  to={`/search?genre=${getGenre(id).toLowerCase()}&page=1`}
+                  to={`/Movie-Star-App/search?genre=${getGenre(id).toLowerCase()}&page=1`}
                   className="btn btn-text"
                 >
                   {getGenre(id)}

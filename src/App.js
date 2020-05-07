@@ -19,10 +19,10 @@ const App = () => {
         <ScrollMemory />
         <Header />
         <Switch>
-          <Route path="Movie-Star-App/" exact component={Movies} />
+          <Route path="/Movie-Star-App/" exact component={Movies} />
 
           <Route
-            path="Movie-Star-App/search"
+            path="/Movie-Star-App/search"
             exact
             component={SearchedResults}
           />
@@ -33,7 +33,11 @@ const App = () => {
               </div>
             }
           >
-            <Route path="Movie-Star-App/:movieId" exact component={MovieInfo} />
+            <Route
+              path="/Movie-Star-App/:movieId"
+              exact
+              component={MovieInfo}
+            />
           </Suspense>
         </Switch>
         <Footer />

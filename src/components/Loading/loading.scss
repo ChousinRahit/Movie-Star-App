@@ -1,0 +1,48 @@
+.sp {
+  width: 5rem;
+  height: 5rem;
+  clear: both;
+  margin: 20px auto;
+}
+.sp-hydrogen {
+  position: relative;
+  // border: 1px white solid;
+  border-radius: 50%;
+  -webkit-animation: spHydro 0.6s infinite linear;
+  animation: spHydro 0.9s infinite linear;
+  // display: none;
+}
+.sp-hydrogen:before,
+.sp-hydrogen:after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+}
+.sp-hydrogen:before {
+  top: calc(50% - 10px);
+  left: calc(50% - 10px);
+  display: none;
+}
+.sp-hydrogen:after {
+  top: 1px;
+  left: 1px;
+}
+@-webkit-keyframes spHydro {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+@keyframes spHydro {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

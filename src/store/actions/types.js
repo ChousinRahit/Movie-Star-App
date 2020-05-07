@@ -1,0 +1,12 @@
+export const GETMOVIES = 'GETMOVIES';
+export const LOADMORE = 'LOADMORE';
+export const LOADING = 'LOADING';
+export const GETMOVIE = 'GRTMOVIE';
+export const GETCREDITS = 'GETCREDITS';
+export const SIMILAR_MOVIES = 'SIMILAR_MOVIES';
+export const GETMOVIES_WITH_QUERY = 'GETMOVIES_WITH_QUERY';
+export const PAGELOADING = 'PAGELOADING';
+export const NULL_MOVIES = 'NULL_MOVIES';
+export const MOVIE_COULD_NOT_LOAD = 'MOVIE_COULD_NOT_LOAD';
+export const UNEXPECTED_ERROR = 'UNEXPECTED_ERROR';
+export const CLEAR_ERROR = 'CLEAR_ERROR';

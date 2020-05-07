@@ -1,0 +1,102 @@
+@import './scss/_mixins';
+@import './components/Header/header.scss';
+@import './components/Hero/hero.scss';
+@import './components/Movies/Movies.scss';
+@import './components/Footer/footer.scss';
+@import './components/Loading/loading.scss';
+@import './components/MovieInfo/movieinfo.scss';
+@import './components//SearchResults/searchResults.scss';
+
+:root {
+  --color-primary: #eb2f64;
+  --color-primary-light: #ff3366;
+  --color-primary-dark: #ba265d;
+
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
+
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+
+  --shadow-light: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+li {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -o-user-select: none;
+  user-select: none;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 62.5%; // 1rem = 10px; 10/16 = 62.5%;
+
+  @include respond(phone) {
+    & {
+      font-size: 0%;
+    }
+  }
+
+  @include respond(tab-land) {
+    & {
+      font-size: 55%;
+    }
+  }
+}
+
+body {
+  // padding: 1rem;
+  background-color: #000;
+  &::selection {
+    color: none;
+    background: none;
+  }
+
+  @include respond(tab-port) {
+    & {
+      padding: 0;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    // box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(120deg, white 0%, white 100%);
+    border-radius: 10px;
+  }
+}
+
+.outer-div {
+  @include respond(big-desktop) {
+    & {
+      width: 90%;
+      margin: auto;
+    }
+  }
+}

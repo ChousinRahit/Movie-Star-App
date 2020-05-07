@@ -60,7 +60,9 @@ const Header = () => {
           setIsCategoriesShowing(false);
         }}
       >
-        <Link to={`/Movie-Star-App/search?genre=${gen.name.toLowerCase()}&page=1`}>
+        <Link
+          to={`/Movie-Star-App/search?genre=${gen.name.toLowerCase()}&page=1`}
+        >
           {gen.name}
         </Link>
       </li>
@@ -177,7 +179,10 @@ const Header = () => {
   return (
     <header>
       <section className="header">
-        <div className="header__logo-wrapper" onClick={() => history.push('/')}>
+        <div
+          className="header__logo-wrapper"
+          onClick={() => history.push('/Movie-Star-App/')}
+        >
           <h1 className="header__heading">
             MOVIE <span className="header__text__star">Star</span>
           </h1>
